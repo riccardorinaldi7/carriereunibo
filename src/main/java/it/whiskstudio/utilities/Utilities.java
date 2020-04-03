@@ -6,6 +6,7 @@ import org.springframework.core.io.Resource;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,7 +19,7 @@ public class Utilities {
 
         try {
             Resource resource = new ClassPathResource("static/" + file);
-            File myObj = resource.getFile();
+            InputStream myObj = resource.getInputStream();
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
