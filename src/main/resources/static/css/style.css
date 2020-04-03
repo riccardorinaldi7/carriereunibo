@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+}
+
+.playerdiv{
+    background-color: rgb(186, 186, 186);
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid rgb(72, 72, 72);
+}
+
+.itsme{
+    background-color: #d36c6c;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #874444;
+}
