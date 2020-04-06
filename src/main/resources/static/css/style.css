@@ -47,8 +47,8 @@ button, input[type="submit"]{
     color: white;
 }
 
-button:focus, , input[type="submit"]:focus{
-    background-color: #44444;
+button:focus, input[type="submit"]:focus{
+    background-color: #444444;
 }
 
 .wrap button:last-of-type, .playerdiv input[type="submit"]{
