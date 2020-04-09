@@ -18,7 +18,10 @@
     <p id="viewcookie"></p>
     <button onclick="readCookie()">Leggi Cookie</button>
     -->
-    <form action="/partita"><input type="submit" value="Continua"></form>
+    <form action="/partita">
+        <input type="text" name="player" placeholder="Nome giocatore">
+        <input type="submit" value="Continua">
+    </form>
 
     <script>
         function readCookie() {

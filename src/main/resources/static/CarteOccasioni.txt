@@ -1,3 +1,27 @@
-CARTA OCC 1
-CARTA OCC 2
-CARTA OCC 3
+OCCASIONE per entrare all'Università... Occorrono i normali requisiti. (Se tutti i giocatori sono entrati all'Università, scartare questo cartoncino e pescarne un altro).
+OCCASIONE per entrare all'Università... Occorrono i normali requisiti. (Se tutti i giocatori sono entrati all'Università, scartare questo cartoncino e pescarne un altro).
+OCCASIONE per entrare all'Università... Occorrono i normali requisiti. (Se tutti i giocatori sono entrati all'Università, scartare questo cartoncino e pescarne un altro).
+OCCASIONE D'ORO per arrivare all'ingresso della Carriera di tua scelta... Occorrono i normali requisiti.
+OCCASIONE per entrare in Politica... Occorrono i normali requisiti.
+OCCASIONE per entrare in Politica... Occorrono i normali requisiti.
+OCCASIONE per andare a Hollywood... Occorrono i normali requisiti.
+OCCASIONE per andare a Hollywood... Occorrono i normali requisiti.
+OCCASIONE per dedicarsi all'Agricoltura... Occorrono i normali requisiti.
+OCCASIONE per dedicarsi all'Agricoltura... Occorrono i normali requisiti.
+OCCASIONE per avviarsi nei Grandi Affari... Occorrono i normali requisiti.
+OCCASIONE per avviarsi nei Grandi Affari... Occorrono i normali requisiti.
+OCCASIONE per avviarsi nei Grandi Affari... Occorrono i normali requisiti.
+OCCASIONE SPECIALE per diventare Cercatore d'Uranio... perchè ti sei dimostrato un ottimo scalatore di montagne, le spese di ingresso sono pagate.
+OCCASIONE SPECIALE per imbarcarsi sul 4 Alberi "ORGOGLIO DEL MARE"... Raddoppia tutta la felicità guadagnata durante la navigazione. Occorrono i normali requisiti.
+OCCASIONE per prendere una bella vacanza a Capri... Occorrono i normali requisiti.
+OCCASIONE per prendere una bella vacanza a Capri... Occorrono i normali requisiti.
+OCCASIONE per diventare Cercatore d'Uranio... Occorrono i normali requisiti.
+OCCASIONE per andare sulla Luna... Occorrono i normali requisiti.
+OCCASIONE per diventare Cercatore d'Uranio... Occorrono i normali requisiti.
+OCCASIONE per andare sulla Luna... Occorrono i normali requisiti.
+OCCASIONE per entrare in Marina... Occorrono i normali requisiti.
+OCCASIONE per entrare in Marina... Occorrono i normali requisiti.
+OCCASIONE per dedicarsi all'Agricoltura... Occorrono i normali requisiti.
+OCCASIONE SPECIALE per andare a Hollywood... Perchè sei proprio di una bellezza eccezionale, le spese di ingresso sono pagate.
+OCCASIONE SPECIALE per partecipare ad un viaggio sulla Luna... Perchè ti sei dimostrato un esperto navigatore, le spese di ingresso sono pagate.
+OCCASIONE SPECIALE per entrare in Politica... Perchè ti sei dimostrato cordiale e socievole, le spese di ingresso sono pagate.

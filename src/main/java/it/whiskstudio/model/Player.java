@@ -5,18 +5,22 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Player {
+    private String id;
     private String nome;
     private int denaro;
     private List<String> occasioni;
     private List<String> esperienze;
 
-    public Player(String nome){
-        this.nome = nome;
+    public Player(String id){
+        this.id = id;
         this.denaro = 0;
         this.occasioni = new ArrayList<String>();
         this.esperienze = new ArrayList<String>();
     }
 
+    public String getId() {
+        return id;
+    }
     public String getNome() {
         return nome;
     }
@@ -36,7 +40,7 @@ public class Player {
     @Override
     public String toString() {
         return "Player{" +
-                "nome='" + nome + '\'' +
+                "id='" + id + '\'' +
                 '}';
     }
 
@@ -45,7 +49,7 @@ public class Player {
     }
 
     public void updateDenaro(int amount) {
-        this.denaro += amount;
+        this.denaro = amount;
     }
 
     public void setEsperienza(String esperienza) {
@@ -70,5 +74,9 @@ public class Player {
             }
         }
         return "";
+    }
+
+    public void setNome(String player) {
+        this.nome = player;
     }
 }

@@ -47,7 +47,7 @@ public class Game {
         Iterator<Player> i = this.players.iterator();
         while(i.hasNext()){
             Player p = (Player) i.next();
-            if (p.getNome().equalsIgnoreCase(nomeGiocatore)) return true;
+            if (p.getId().equalsIgnoreCase(nomeGiocatore)) return true;
         }
         return false;
     }
@@ -67,12 +67,12 @@ public class Game {
 
     public boolean hasplayer(String nomegiocatore) {
         Iterator<Player> i = players.iterator();
-        while (i.hasNext()){ if(i.next().getNome().equals(nomegiocatore)) return true; }
+        while (i.hasNext()){ if(i.next().getId().equals(nomegiocatore)) return true; }
         return false;
     }
 
     public void removePlayer(String nomegiocatore) {
-        if(players.removeIf(player -> { return player.getNome().equalsIgnoreCase(nomegiocatore);}))
+        if(players.removeIf(player -> { return player.getId().equalsIgnoreCase(nomegiocatore);}))
             colorsIterator.add(nomegiocatore);
     }
 
@@ -80,7 +80,7 @@ public class Game {
         Iterator<Player> i = players.iterator();
         while(i.hasNext()){
             Player p = i.next();
-            if(p.getNome().equalsIgnoreCase(nomegiocatore)){
+            if(p.getId().equalsIgnoreCase(nomegiocatore)){
                 try {
                     String occasione = occasioni.remove(0);
                     if(occasione != null) p.setOccasione(occasione);
@@ -98,7 +98,7 @@ public class Game {
         Iterator<Player> i = players.iterator();
         while(i.hasNext()){
             Player p = i.next();
-            if(p.getNome().equalsIgnoreCase(nomegiocatore)){
+            if(p.getId().equalsIgnoreCase(nomegiocatore)){
                 try {
                     String esperienza = esperienze.remove(0);
                     if(esperienza != null) p.setEsperienza(esperienza);
@@ -116,7 +116,7 @@ public class Game {
         Iterator<Player> i = players.iterator();
         while(i.hasNext()){
             Player p = i.next();
-            if(p.getNome().equalsIgnoreCase(nomegiocatore)){
+            if(p.getId().equalsIgnoreCase(nomegiocatore)){
                 return p;
             }
         }

@@ -26,9 +26,9 @@
                 <td>${tache.name}</td>
             </tr>
         </c:forEach>--%>
-        <div id="${player.nome}" class="playerdiv">
+        <div id="${player.id}" class="playerdiv">
             <h3>${player.nome}</h3>
-            <div id="${player.nome}money"><p>Denaro: <span id="denaro">${player.denaro}</span> €</p></div>
+            <div id="${player.id}money"><p>Denaro: <span id="denaro">${player.denaro}</span> €</p></div>
 
             <c:forEach var="occasione" items="${player.occasioni}">
                 <div class="card occasioni">
@@ -68,7 +68,7 @@
         var submit = document.createElement("input");
         submit.type = 'submit';
         submit.name = 'updatemoney';
-        submit.value = 'Aggiorna';
+        submit.value = 'Aggiorna denaro';
         formmoney.appendChild(input);
         formmoney.appendChild(submit);
         divmoney.appendChild(formmoney);

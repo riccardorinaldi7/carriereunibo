@@ -86,7 +86,7 @@ public class HomeController {
     }
 
     @GetMapping("/partita")
-    public String partita(Model model, @CookieValue(defaultValue = "") String idpartita) {
+    public String partita(Model model,@RequestParam(defaultValue = "") String player, @CookieValue(defaultValue = "") String nomegiocatore, @CookieValue(defaultValue = "") String idpartita) {
         if (idpartita == "") {
             model.addAttribute("messaggioerrore", "Non ho un id partita");
             model.addAttribute("idpartita", idpartita);
@@ -98,6 +98,7 @@ public class HomeController {
             model.addAttribute("idpartita", idpartita);
             return "error";
         }
+        if(!nomegiocatore.equals("")) g.getPlayer(nomegiocatore).setNome(player);
         model.addAttribute("players", g.getPlayers());
         model.addAttribute("version", g.getVersion());
         return "partita";

@@ -14,6 +14,8 @@
     <h1>Partita Trovata</h1>
     <p>Codice partita: ${idpartita}</p>
     <p>Giocatori attuali: ${giocatori}</p>
-    <form action="/partita"><input type="submit" value="Continua"></form>
+    <form action="/partita">
+        <input type="text" name="player" placeholder="Nome giocatore">
+        <input type="submit" value="Continua"></form>
 </body>
 </html>
