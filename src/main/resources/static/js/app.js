@@ -28,4 +28,4 @@ function printGameCookie(){
     return "id=" + getCookie("idpartita") + " - colore=" + getCookie("nomegiocatore");
 }
 
-function getHomeUrl(){ return 'https://carriereunibo.herokuapp.com/' /*'http://localhost:8080/'*/;}
+function getHomeUrl(){ return /*'https://carriereunibo.herokuapp.com/'*/ 'http://localhost:8080/';}

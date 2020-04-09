@@ -1,6 +1,7 @@
 package it.whiskstudio.model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Player {
@@ -45,5 +46,29 @@ public class Player {
 
     public void updateDenaro(int amount) {
         this.denaro += amount;
+    }
+
+    public void setEsperienza(String esperienza) {
+        esperienze.add(esperienza);
+    }
+
+    public String removeCard(String carta) {
+        Iterator<String> occIter = this.occasioni.iterator();
+        while(occIter.hasNext()){
+            String s = occIter.next();
+            if(s.equalsIgnoreCase(carta)){
+                this.occasioni.remove(s);
+                return "occasione";
+            }
+        }
+        Iterator<String> espIter = this.esperienze.iterator();
+        while(espIter.hasNext()){
+            String s = espIter.next();
+            if(s.equalsIgnoreCase(carta)){
+                this.esperienze.remove(s);
+                return "esperienza";
+            }
+        }
+        return "";
     }
 }

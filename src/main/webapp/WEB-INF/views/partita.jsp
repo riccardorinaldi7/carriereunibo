@@ -31,17 +31,19 @@
             <div id="${player.nome}money"><p>Denaro: <span id="denaro">${player.denaro}</span> €</p></div>
 
             <c:forEach var="occasione" items="${player.occasioni}">
-                <div id="occasioni" class="card">
+                <div class="card occasioni">
                     <p>${occasione}</p>
                 </div>
             </c:forEach>
             <c:forEach var="esperienza" items="${player.esperienze}">
-                <div id="esperienze" class="card">
+                <div class="card esperienze">
                     <p>${esperienza}</p>
                 </div>
             </c:forEach>
         </div>
     </c:forEach>
+
+    <div id="cardMenu" style="display: none;"></div>
 
     <script>
         var iddiv = document.getElementById("demo");
@@ -51,6 +53,11 @@
         var me = getCookie("nomegiocatore");
         var mydiv = document.getElementById(me);
         mydiv.classList.add("itsme");
+
+        var mycards = mydiv.getElementsByClassName("card");
+        for (let card of mycards) {
+            card.onclick = cardMenu;
+        }
 
         var divmoney = document.getElementById(me+"money");
         var formmoney = document.createElement("form");
@@ -98,6 +105,71 @@
         }
 
         setInterval(checkUpdate, 10000);
+
+        function cardMenu(event){
+            var menuDiv = document.getElementById("cardMenu");
+            menuDiv.style.display = "block";
+            menuDiv.onclick = function(e){
+                if(e.target == menuDiv) menuDiv.style.display = "none";
+            }
+            //svuoto menuDiv
+            var child = menuDiv.lastElementChild;
+            while (child) {
+                menuDiv.removeChild(child);
+                child = menuDiv.lastElementChild;
+            }
+            var useCardForm = document.createElement("form");
+            useCardForm.action = "/usecard";
+            useCardForm.method = 'post';
+            var sendCardForm = document.createElement("form");
+            sendCardForm.action = "/sendcard";
+            sendCardForm.method = 'post';
+            sendCardForm.id = "sendCardForm"
+            var useButton = document.createElement("input");
+            useButton.type = "submit";
+            useButton.name = 'usacarta'
+            useButton.value = "Usa";
+            var sendButton = document.createElement("input");
+            sendButton.type = "submit";
+            sendButton.name = 'cedicarta'
+            sendButton.value = "Cedi a";
+            var sendList = document.createElement("select");
+            sendList.name = "recipient";
+            sendList.form = sendCardForm;
+            sendList.required = true;
+            var otherPlayers = getPlayers();
+            for(var i=0; i<otherPlayers.length; i++){
+               var option = document.createElement("option");
+               option.value = otherPlayers[i];
+               option.innerText = otherPlayers[i];
+               sendList.appendChild(option);
+            }
+            var cardInput = document.createElement("input");
+            cardInput.type = 'text';
+            cardInput.readOnly = true;
+            cardInput.name = 'carta';
+            cardInput.value = event.target.innerText;
+            cardInput.classList.add('card');
+            console.log(event.target.innerText);
+            useCardForm.appendChild(cardInput);
+            useCardForm.appendChild(useButton);
+            var cardInputForSend = cardInput.cloneNode();
+            cardInputForSend.style.display = 'none';
+            sendCardForm.appendChild(cardInputForSend);
+            sendCardForm.appendChild(sendList);
+            sendCardForm.appendChild(sendButton);
+            menuDiv.appendChild(useCardForm);
+            menuDiv.appendChild(sendCardForm);
+        }
+
+        function getPlayers(){
+            var players = [];
+            var divs = document.getElementsByClassName("playerdiv");
+            for(var i=0; i<divs.length; i++){
+                if(divs[i].id != me) players.push(divs[i].id)
+            }
+            return players;
+        }
 
         /*var button = document.createElement("button");
         button.onclick = getOccasione;

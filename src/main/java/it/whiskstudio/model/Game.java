@@ -101,7 +101,7 @@ public class Game {
             if(p.getNome().equalsIgnoreCase(nomegiocatore)){
                 try {
                     String esperienza = esperienze.remove(0);
-                    if(esperienza != null) p.setOccasione(esperienza);
+                    if(esperienza != null) p.setEsperienza(esperienza);
                     return;
                 } catch (Exception e){
                     System.out.println("Carte finite - non è un problema");

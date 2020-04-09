@@ -2,6 +2,7 @@ package it.whiskstudio.controller;
 
 import it.whiskstudio.model.AppSession;
 import it.whiskstudio.model.Game;
+import it.whiskstudio.model.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -144,6 +145,33 @@ public class HomeController {
             return String.valueOf(game.getVersion());
         }
         return "0";
+    }
+
+    @PostMapping("/usecard")
+    public String usaCarta(Model model, @RequestParam String carta, @CookieValue(defaultValue = "") String nomegiocatore, @CookieValue(defaultValue = "") String idpartita) {
+        Game game = appSession.getGame(idpartita);
+        if(carta != ""){
+            game.getPlayer(nomegiocatore).removeCard(carta);
+            game.incrementaVersione();
+        }
+        model.addAttribute("players", game.getPlayers());
+        model.addAttribute("version", game.getVersion());
+        return "partita";
+    }
+
+    @PostMapping("/sendcard")
+    public String inviaCarta(Model model, @RequestParam String carta, @RequestParam String recipient, @CookieValue(defaultValue = "") String nomegiocatore, @CookieValue(defaultValue = "") String idpartita) {
+        Game game = appSession.getGame(idpartita);
+        if(carta != "" && recipient != ""){
+            String tipoCarta = game.getPlayer(nomegiocatore).removeCard(carta);
+            Player destinatario = game.getPlayer(recipient);
+            if(tipoCarta.equalsIgnoreCase("occasione")) destinatario.setOccasione(carta);
+            else if(tipoCarta.equalsIgnoreCase("esperienza")) destinatario.setEsperienza(carta);
+            game.incrementaVersione();
+        }
+        model.addAttribute("players", game.getPlayers());
+        model.addAttribute("version", game.getVersion());
+        return "partita";
     }
 
 

@@ -66,9 +66,39 @@ button:focus, input[type="submit"]:focus{
 
 .card{
     padding: 20px;
-    background-color: lightsteelblue;
     margin: 10px auto;
     max-width: 45%;
+}
+
+.esperienze{
+    background-color: lightsteelblue;
+}
+.occasioni{
+    background-color: #addebc;
+}
+
+#cardMenu{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+}
+
+#cardMenu form {
+    width: 30%;
+    margin: auto;
+    position: relative;
+    top: 30vh;
+}
+
+#cardMenu input.card {
+    text-align: center;
+    border: none;
+}
+
+#cardMenu input{
+    width: 90%;
 }
 
 @media screen and (max-width: 700px){

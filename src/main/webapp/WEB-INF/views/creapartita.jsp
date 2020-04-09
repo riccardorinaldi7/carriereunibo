@@ -14,8 +14,10 @@
     <h1>Partita creata</h1>
     <p>Codice partita: ${idpartita}</p>
     <p>Nome giocatore: ${nomegiocatore}</p>
+    <!--
     <p id="viewcookie"></p>
     <button onclick="readCookie()">Leggi Cookie</button>
+    -->
     <form action="/partita"><input type="submit" value="Continua"></form>
 
     <script>
