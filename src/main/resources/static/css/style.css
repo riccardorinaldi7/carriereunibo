@@ -102,7 +102,7 @@ button:focus, input[type="submit"]:focus{
     width: 90%;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1200px){
     .playerdiv{
         width: 90%;
     }
